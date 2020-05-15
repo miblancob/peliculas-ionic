@@ -27,7 +27,7 @@ export interface PeliculaDetalle {
   backdrop_path: string;
   belongs_to_collection: Belongstocollection;
   budget: number;
-  genres: Genre[];
+  genres: Genero[];
   homepage: string;
   id: number;
   imdb_id: string;
@@ -67,11 +67,6 @@ interface Productioncompany {
   origin_country: string;
 }
 
-interface Genre {
-  id: number;
-  name: string;
-}
-
 interface Belongstocollection {
   id: number;
   name: string;
@@ -104,4 +99,13 @@ export interface Cast {
   name: string;
   order: number;
   profile_path: string;
+}
+
+export interface ListaGeneros {
+  genres: Genero[];
+}
+
+export interface Genero {
+  id: number;
+  name: string;
 }

@@ -4,6 +4,7 @@ import {
   RespuestaMDB,
   PeliculaDetalle,
   RespuestaCredits,
+  ListaGeneros,
 } from "../interfaces/interfaces";
 import { environment } from "src/environments/environment";
 
@@ -65,5 +66,10 @@ export class MoviesService {
   buscarPeliculas(texto: string) {
     const query = `/search/movie?query=${texto}`;
     return this.ejecutarQuery<RespuestaMDB>(query);
+  }
+
+  getGeneros() {
+    const query = `/genre/movie/list?a=1`;
+    return this.ejecutarQuery<ListaGeneros>(query);
   }
 }

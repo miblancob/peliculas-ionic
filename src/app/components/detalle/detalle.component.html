@@ -84,7 +84,10 @@
     </ion-buttons>
     <ion-buttons slot="end">
       <ion-button (click)="favorito()">
-        <ion-icon slot="end" name="star-outline"></ion-icon>
+        <ion-icon
+          slot="end"
+          [name]="peliculaFavorita ? 'star' : 'star-outline'"
+        ></ion-icon>
         <ion-label>Favorito</ion-label>
       </ion-button>
     </ion-buttons>
